@@ -1,31 +1,19 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
+import style from './App.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
 		<>
-			<div>
-				<a href="https://vite.dev" target="_blank">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
+			<div id="calculator" className={style.calculator}>
+				<input id="display" className={style.display} type="text" />
+				<div id="button-container" className={style.buttonContainer}>
+					<button className={style.button}>C</button>
+					<button className={style.button}>1</button>
+					<button className={style.button}>2</button>
+					<button className={style.button}>+</button>
+				</div>
 			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-				<p>
-					Edit <code>src/App.jsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-			<button className="btn btn-success">test</button>
 		</>
 	);
 }
