@@ -14,6 +14,9 @@ function App() {
 			return setCalVal('');
 		}
 		if (buttonText === '=') {
+			if (calVal == '') {
+				return;
+			}
 			let result = eval(calVal);
 			return setCalVal(result);
 		}
