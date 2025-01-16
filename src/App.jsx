@@ -17,9 +17,16 @@ function App() {
 			if (calVal == '') {
 				return;
 			}
-			let result = eval(calVal);
-			return setCalVal(result);
+			try {
+				let result = eval(calVal);
+				return setCalVal(result);
+			} catch (e) {
+				if (e instanceof SyntaxError) {
+					alert(e.message);
+				}
+			}
 		}
+
 		let newVal = calVal + buttonText;
 		setCalVal(newVal);
 	};
