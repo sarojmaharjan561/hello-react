@@ -7,11 +7,11 @@ import ButtonsContainer from './components/ButtonsContainer';
 import { useState } from 'react';
 
 function App() {
-	const [calVal, setCalVal] = useState('');
+	const [calVal, setCalVal] = useState(0);
 
 	const onButtonClick = (buttonText) => {
 		if (buttonText === 'C') {
-			return setCalVal('');
+			return setCalVal(0);
 		}
 		if (buttonText === '=') {
 			if (calVal == '') {
@@ -27,7 +27,12 @@ function App() {
 			}
 		}
 
-		let newVal = calVal + buttonText;
+		if (calVal == 0) {
+			var newVal = buttonText;
+		} else {
+			newVal = calVal + buttonText;
+		}
+
 		setCalVal(newVal);
 	};
 
