@@ -17,8 +17,8 @@ const ButtonContainer = ({ onButtonClick }) => {
 		'.',
 		'8',
 		'9',
-		'0',
 		'=',
+		'0',
 	];
 
 	return (
