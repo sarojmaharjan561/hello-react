@@ -22,7 +22,9 @@ function App() {
 				return setCalVal(result);
 			} catch (e) {
 				if (e instanceof SyntaxError) {
+					console.log('here');
 					alert(e.message);
+					return setCalVal(0);
 				}
 			}
 		}
