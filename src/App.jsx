@@ -29,7 +29,7 @@ function App() {
 			}
 		}
 
-		if (calVal == 0) {
+		if (calVal === 0) {
 			var newVal = buttonText;
 		} else {
 			newVal = calVal + buttonText;
