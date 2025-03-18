@@ -24,7 +24,7 @@ function App() {
 				if (e instanceof SyntaxError) {
 					console.log('here');
 					alert(e.message);
-					return setCalVal(0);
+					return setCalVal(calVal);
 				}
 			}
 		}
