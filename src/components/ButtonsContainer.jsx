@@ -3,7 +3,7 @@ import Button from './Buttton';
 
 const ButtonContainer = ({ onButtonClick }) => {
 	const buttonNames = [
-		'C',
+		'AC',
 		'+',
 		'-',
 		'*',
