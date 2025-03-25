@@ -10,7 +10,7 @@ function App() {
 	const [calVal, setCalVal] = useState(0);
 
 	const onButtonClick = (buttonText) => {
-		if (buttonText === 'C') {
+		if (buttonText === 'AC') {
 			return setCalVal(0);
 		}
 		if (buttonText === '=') {
